@@ -60,4 +60,7 @@ fs.readFile("contacts.txt", "utf-8", (err, result) =>
     });
 console.log('2');
 console.log('3');
-
+//Code to check your machine CPUs
+const os = require("os");
+console.log(os.cpus().length)
+//We should always write a code which is NonBlocking so that remaining should work smoothly
