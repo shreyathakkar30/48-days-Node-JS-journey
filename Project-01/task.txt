@@ -1,0 +1,21 @@
+// RESTFULL API -JSON
+ 
+GET /users - HTML document Render -DONE
+GET /api/user - List all user JSON - DONE
+
+GET /api/user/1 -Get the user with ID 1 -DONE
+GET /api/user/2 -Get the user with ID 2 -DONE
+
+
+Dynamic Path Parameters
+GET /api/users/:id 
+:id -> Variable | Dynamic
+
+
+POST /api/user - Create new user
+
+PATCH /api/user/1 - Edit t he user with ID 1
+
+DELETE /api/user/1 -Delete the user with ID 1
+
+//I have used "https://www.mockaroo.com/" which uses Fake data and Generates JSON file of generated Fake data
