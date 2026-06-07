@@ -4,10 +4,23 @@
 //but to understand which is the main file which file should get executed
 //to solve that We always prefer to name the main file as index.js not mandatory but as I said is a good practice
 const http = require ("http");
-const fs = require("fs");
-const url = require("url");
+//const fs = require("fs");
+//const url = require("url");
+const express = require("express");
 
-const myServer = http.createServer((req, res) => {
+const app = express();
+app.get('/', (req, res) => {
+    return res.send("Hello From HomePage!")
+} )
+
+app.get('/about', (req, res) => {
+    return res.send(`Hello!! ${req.query.name}`)
+    //return res.send("Hello from About Page!! " + '\nHey\n' + req.query.name + '\nYou are age of\n ' + req.query.age)
+})
+
+
+
+/*function myHandler(req, res){
     if(req.url === '/favicon.ico') return res.end();
     //Try to create LOGS
     const log = `${Date.now()}: ${req.method} ${req.url} New Request Received\n`;
@@ -36,14 +49,22 @@ const myServer = http.createServer((req, res) => {
         }
          // res.end("Hello From Server Again");//You can send here anything 
     })
+
+
+}*/
+//const myServer = http.createServer(app);
+
+    
     //console.log(req)
     //console.log('New Req Received');
   
-});
+
 //PORT is like a door for example there's a house which consists of Multiple doors
 //From which door you want to enter in the house
 //Will be dicided by PORT number
 //If you're having multiple servers You can't run them on a same port
-myServer.listen(8000, () => {
-    console.log("Server Started!!")
-})
+// myServer.listen(8000, () => {
+//     console.log("Server Started!!")
+// })
+
+app.listen(8000, () => console.log("Server Started!!"));
