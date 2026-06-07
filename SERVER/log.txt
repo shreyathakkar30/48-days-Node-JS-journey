@@ -22,3 +22,7 @@
 1780811602831: /search?search_query=JavaScript+Tutorial+on+Tic+Tac+Toe New Request Received
 1780811646329: / New Request Received
 1780811671539: /search?search_query=javascript+tic+tac+toe New Request Received
+1780812758885: GET / New Request Received
+1780812809732: GET /about New Request Received
+1780813439624: GET / New Request Received
+1780813446995: GET /signup New Request Received
