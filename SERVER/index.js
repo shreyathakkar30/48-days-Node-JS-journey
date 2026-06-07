@@ -5,16 +5,27 @@
 //to solve that We always prefer to name the main file as index.js not mandatory but as I said is a good practice
 const http = require ("http");
 const fs = require("fs");
+const url = require("url");
 
 const myServer = http.createServer((req, res) => {
+    if(req.url === '/favicon.ico') return res.end();
     //Try to create LOGS
     const log = `${Date.now()}: ${req.url} New Request Received\n`;
+    const myUrl = url.parse(req.url, true);
+    console.log(myUrl);
     fs.appendFile('log.txt', log, (err, data) => {
-        switch(req.url){
+        switch(myUrl.pathname){
             case '/': res.end("HomePage");
             break;
-            case '/about': res.end("I am Shreya Thakkar")
+            case '/about': //res.end("I am Shreya Thakkar")
+            const username = myUrl.query.myname;
+            res.end(`Hi, ${username}`);
             break;
+
+
+            case "/search":
+                const search = myUrl.query.search_query;
+                res.end("Here are your results for " +search);
             default: res.end("404 Not found")
         }
          // res.end("Hello From Server Again");//You can send here anything 
