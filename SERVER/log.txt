@@ -26,3 +26,45 @@
 1780812809732: GET /about New Request Received
 1780813439624: GET / New Request Received
 1780813446995: GET /signup New Request Received
+
+
+
+//Version
+5.2.1
+There are three parts 
+1st part: 5
+2nd part: 2
+3rd part: 1
+
+
+//3rd part or Lat part - Minor Fixes (Optional Update)
+Latest-> 5.2.1
+
+
+// 2nd part 
+Latest-> 2 (Recommended Bug Fix or Security Fix)
+
+
+//1st part => Major Release
+5-> Current written code is of 5 if I install 6 It is possible that this code might be run might not be
+//Major or Breaking Update-> You should not update it if you are working on existing application which runs on previous major Version
+//If you're building a new project from scratch then go for updated Version
+
+
+install express ^5.2.1
+5th Version
+
+^5.2.1 | 5.2.1 -> < 6.0.0
+
+
+^ -> Install all Recommended and Minor Fixes Automatically
+
+~ -> Only Installs Minor Fixed Update Version
+
+~5.2.1
+~5.2.2
+~5.2.3
+~5.2.4
+~5.2.5
+
+5.3.0 NOOOOO....
