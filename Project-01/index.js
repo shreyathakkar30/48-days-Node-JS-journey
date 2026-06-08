@@ -5,13 +5,13 @@ const app = express();
 
 
 const port = 8000;
-//Middleware -plugin
+// Middleware -plugin
 app.use(express.urlencoded({ extended: false}))
-
+//app.use(express.json({ extended: false }))//This will allow you  to work with JSON data
 app.use((req, res, next) => {
     fs.appendFile('log.txt', `${Date.now()}: ${req.method}: ${req.path}\n`, (err, data) =>{
         next();
-    })
+    });
     //console.log("Hello from Middleware 1");
     //req.myUserName = 'Shreya Thakkar'
     //return res.json({ msg: "Hello from Middleware 1"})
@@ -35,6 +35,9 @@ app.get('/users', (req,res) => {
 });
 //Rest API
 app.get('/api/users', (req, res) => {
+    console.log(req.headers);
+    res.setHeader('X-myName', "Shreya Thakkar") //Custom Header
+    //Always add X to Custome headers
     console.log("I am in get route", req.myUserName);
     return res.json(users);
 });
