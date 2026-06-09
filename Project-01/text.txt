@@ -1,3 +1,20 @@
 Schema- define the structure
     schemda- Model
     Using Model we do CRUD operations
+//app.use(express.json({ extended: false }))//This will allow you  to work with JSON data
+// app.use((req, res, next) => {
+//     fs.appendFile('log.txt', `${Date.now()}: ${req.method}: ${req.path}\n`, (err, data) =>{
+//         next();
+//     });
+    //console.log("Hello from Middleware 1");
+    //req.myUserName = 'Shreya Thakkar'
+    //return res.json({ msg: "Hello from Middleware 1"})
+    //next();
+// } )
+
+// app.use((req, res, next) => {
+//     console.log("Hello from Middleware 2", req.myUserName);
+//     //return res.json({ msg: "Hello from Middleware 1"})
+//     next();
+//     //return res.end("Hey");
+// } )
