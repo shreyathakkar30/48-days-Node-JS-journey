@@ -1,0 +1,3 @@
+Schema- define the structure
+    schemda- Model
+    Using Model we do CRUD operations
